@@ -8,7 +8,7 @@ let upperBound = null;
 
 do {
 
-        lowerBound = Number(readlineSync.question("Lower bound: "));
+        lowerBound = Number(readlineSync.question("\nLower bound: "));
         upperBound = Number(readlineSync.question("Upper bound: "));
 
 } while ((((lowerBound < MIN)
@@ -17,7 +17,7 @@ do {
 || (upperBound > MAX)))
 || ((Number.isNaN(lowerBound)
 || Number.isNaN(upperBound))
-|| ((lowerBound > upperBound))
+|| ((lowerBound >= upperBound))
 || (!Number.isInteger(lowerBound)
 || !Number.isInteger(upperBound))));
 
@@ -37,4 +37,4 @@ if (total != lowerBound) {
 
 };
 
-console.log(total.toLocaleString());
+console.log("\n" + total.toLocaleString() + ".");
