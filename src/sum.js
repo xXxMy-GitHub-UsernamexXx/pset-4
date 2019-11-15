@@ -8,8 +8,8 @@ let upperBound = null;
 
 do {
 
-    lowerBound = readlineSync.question("Lower bound: ");
-    upperBound = readlineSync.question("Upper bound: ");
+        lowerBound = Number(readlineSync.question("Lower bound: "));
+        upperBound = Number(readlineSync.question("Upper bound: "));
 
 } while ((((lowerBound < MIN)
 || (lowerBound > MAX))
@@ -17,6 +17,24 @@ do {
 || (upperBound > MAX)))
 || ((Number.isNaN(lowerBound)
 || Number.isNaN(upperBound))
-|| (lowerBound > upperBound)));
+|| ((lowerBound > upperBound))
+|| (!Number.isInteger(lowerBound)
+|| !Number.isInteger(upperBound))));
 
-let addends = [];
+let addend = ((lowerBound % 2) === 0) ? lowerBound : lowerBound + 1;
+let total = null;
+
+while (addend < upperBound) {
+
+        total = total + addend;
+        addend = addend + 2;
+
+};
+
+if (total != lowerBound) {
+
+        total = ((upperBound % 2) === 0) ? total + upperBound : total;
+
+};
+
+console.log(total.toLocaleString());
