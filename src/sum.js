@@ -17,7 +17,6 @@ do {
 || (upperBound > MAX)))
 || ((Number.isNaN(lowerBound)
 || Number.isNaN(upperBound))
-|| ((lowerBound >= upperBound))
 || (!Number.isInteger(lowerBound)
 || !Number.isInteger(upperBound))));
 

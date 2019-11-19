@@ -9,12 +9,20 @@ do {
 
         integer = Number(readlineSync.question("\n\nPositive integer: "));
 
-} while (((integer > MAX)
+} while ((((integer > MAX)
 || (integer < MIN))
 || (Number.isNaN(integer)
 || !Number.isInteger(integer)));
 
-/*
-Math.trunc(integer);
-/10
-*/
+let reverse = null;
+integer = String(integer);
+
+for (let i = integer.length; i > 0; i--) {
+
+
+        if (i > 0) {
+                remainder = remainder / 10;
+                remainder = Math.floor(remainder);
+        };
+        
+};
